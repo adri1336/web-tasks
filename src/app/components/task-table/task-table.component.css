@@ -1,0 +1,40 @@
+.task_table_body {
+    margin: 30px;
+    min-width: 250px;
+}
+
+div.task_table_body h2 {
+    text-align: center;
+}
+
+
+div.task_table_body table {
+    width: 100%;
+    border: 1px solid #30363D;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+div.task_table_body th {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div.task_table_body tr.mat-row:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+div.task_table_body tr.mat-row {
+    background-color: #202124;
+}
+
+div.task_table_body td {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div.task_table_body mat-icon {
+    margin: 3px;
+    cursor: pointer;
+}

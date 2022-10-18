@@ -1,0 +1,27 @@
+#page {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background-color: #202124;
+    color: white;
+}
+
+#taskPage {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#task_tables {
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
+    cursor: pointer;
+}
