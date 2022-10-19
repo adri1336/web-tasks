@@ -1,1 +1,46 @@
-<p>task works!</p>
+<form
+    id="taskForm"
+    [formGroup]="taskForm"
+    (ngSubmit)="onSubmit()"
+    #formDir="ngForm">
+    <div [hidden]="formDir.submitted">
+        <label for="status">Status</label><br>
+        <select
+            matInput
+            formControlName="status"
+        >
+            <option value="0">To-do</option>
+            <option value="1">Done</option>
+        </select>
+        <br>
+        <label for="title">Title</label><br>
+        <input
+            [readonly]="task.status != TASK_STATUS.TODO"
+            matInput
+            type="text"
+            formControlName="title"
+        /><br>
+        <label for="author">Author</label><br>
+        <input
+            [readonly]="task.status != TASK_STATUS.TODO"
+            matInput
+            type="text"
+            formControlName="author"
+        /><br>
+        <label for="description">Description</label><br>
+        <input
+            [readonly]="task.status != TASK_STATUS.TODO"
+            matInput
+            type="text"
+            formControlName="description"
+        /><br>
+        <label for="creation_date">Creation date</label><br>
+        <input
+            readonly
+            matInput
+            type="text"
+            formControlName="creation_date"
+        /><br>
+        <input *ngIf="task.status == TASK_STATUS.TODO" type="submit" value="Edit task"/>
+    </div>
+</form>
